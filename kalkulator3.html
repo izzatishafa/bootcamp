@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kalkulator sederhana</title>
+  </head>
+  <body style="background-color: #fce5e5">
+    <style>
+      button {
+        width: 100%;
+        padding: 8px;
+      }
+    </style>
+    <script>
+      function setVal(val) {
+        console.log(document.getElementById("angkainput").value);
+        document.getElementById("angkainput").value += val;
+      }
+
+      function dele() {
+        console.log('del ran')
+        var str = document.getElementById("angkainput").value;
+        str = str.slice(0, -1);
+        document.getElementById("angkainput").value = str;
+      }
+
+      function setResult() {
+        var count = eval(document.getElementById("angkainput").value);
+        if (document.getElementById("angkainput").value == "") {
+          document.getElementById("angkainput").value = "";
+        } else {
+          document.getElementById("angkainput").value = count;
+        }
+      }
+
+      function clean() {
+        document.getElementById("angkainput").value = "";
+      }
+    </script>
+    <center>
+      <h2>Kalkulator Sederhana</h2>
+      <table border="1">
+        <tr>
+          <td colspan="5">
+            <input type="text" name="angkainput" id="angkainput" />
+          </td>
+        </tr>
+        <tr>
+          <td><button onclick="setVal(1);">1</button></td>
+          <td><button onclick="setVal(2);">2</button></td>
+          <td><button onclick="setVal(3);">3</button></td>
+          <td><button onclick="setVal('+')">+</button></td>
+          <td><button onclick="dele();">Del</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="setVal(6);">6</button></td>
+          <td><button onclick="setVal(5);">5</button></td>
+          <td><button onclick="setVal(4);">4</button></td>
+          <td><button onclick="setVal('-');">-</button></td>
+          <td><button onclick="clean()">AC</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="setVal(7);">7</button></td>
+          <td><button onclick="setVal(8);">8</button></td>
+          <td><button onclick="setVal(9);">9</button></td>
+          <td><button onclick="setVal('*');">x</button></td>
+          <td rowspan="2">
+            <button style="height: 80px" onclick="setResult();">=</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><button onclick="setVal(0);">0</button></td>
+          <td><button onclick="setVal('.');">.</button></td>
+          <td><button onclick="setVal('/');">:</button></td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>

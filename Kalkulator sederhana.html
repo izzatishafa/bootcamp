@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body bgcolor="silver">
+    <center>
+    <div> 
+       <input type="number" id="angka1">
+       <select id="operator">
+           <option value="+">+</option>
+           <option value="-">-</option>
+           <option value="*">*</option>
+           <option value="/">/</option>
+       </select>
+       <input type="number" id="angka2">
+       <span>=</span>
+       <span id="hasil">hasil</span><br><br>
+       <button id="submit">submit</button>
+    </div>
+    <script>
+        const angka1 = document.getElementById("angka1") 
+        const angka2 = document.getElementById("angka2")
+        const operator = document.getElementById("operator")
+        const hasil = document.getElementById("hasil")
+        const submit = document.getElementById("submit")
+
+        submit.addEventListener('click', function() {
+            hasil.innerText = eval( angka1.value + operator.value + angka2.value)
+        })
+    </script>
+    </center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--nama file kalkulator.php untuk membuat kalkulator dengan javascript-->
+<!-- <html>
+<head>
+<title>Kalkulator Sederhana</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+
+<!-
+
+function hitung(){
+
+var myForm = document.form1;
+var x=eval(myForm.x.value);
+var y=eval(myForm.y.value);
+var pil= myForm.opt.value;
+if (pil == "tambah") {
+var z = x + y;
+ }else if (pil == "kurang") {
+var z = x - y;
+ } else if (pil == "kali") {
+var z = x * y;
+ } else if (pil == "bagi") {
+var z = x / y;
+ }
+ myForm.hasil.value = z;
+ myForm.x.value = "";
+ myForm.y.value = "";
+}
+function resetForm(){
+document.form1.reset();
+}
+
+//-->
+
+<!-- </scrip>
+<div align="center">
+<form name="form1" action="#">
+<p>angka1  <input type="text" name="x" /></p>
+<p>angka2 <input type="text" name="y" /></p>
+<p>hasil  <input type="text" name="hasil" disabled="true" /></p>
+<p>operator <select name="opt"></p>
+ <option value="tambah"> + (tambah)</option>
+ <option value="kurang"> - (kurang)</option>
+ <option value="kali"> * (kali)</option>
+ <option value="bagi"> / (bagi)</option>
+</select>
+<input type="button" value="=" onClick="hitung()" />
+<input type="button" value="CLEAR" onClick="resetForm()" />
+</form>
+</body>
+</html> -->

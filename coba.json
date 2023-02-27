@@ -1,0 +1,10 @@
+{
+ "nama": "izzati",
+ "umur": 17,
+ "ips": [4.25, 5.8, 9.0],
+ "alamat": {
+   "jalan": "jln edelweis",
+   "desa": "pesantunan",
+   "kecamatan": "wanasari"
+ }
+}
